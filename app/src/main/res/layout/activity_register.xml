@@ -8,27 +8,18 @@
     android:background="#60E3BA67"
     tools:context=".RegisterActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/logo"
-        />
 
     <TextView
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:fontFamily="monospace"
         android:text="FEEDR"
         android:textAlignment="center"
-        android:textSize="60sp"
-        android:layout_marginTop="10dp"
         android:textColor="#F80303"
-        android:textStyle="bold"
-        android:layout_below="@+id/logo"
-        />
+        android:textSize="60sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/bannerDescription"
@@ -69,13 +60,40 @@
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILName"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Name of Organisation"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        android:layout_below="@id/idTILUserName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEdtName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <!--edit text for user password-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/idTILPassword"
         style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTILUserName"
+        android:layout_below="@id/idTILName"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -95,8 +113,6 @@
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <!--edit text for confirmation of user password-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/idTILtype"
@@ -124,17 +140,44 @@
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/idTILlocation"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTILtype"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Location"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <!--button for creating user account.-->
     <Button
         android:id="@+id/idBtnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTILtype"
+        android:layout_below="@id/idTILlocation"
         android:layout_marginStart="25dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/button_back"
-        android:text="Register"/>
+        android:text="Register" />
 
     <!--text view for displaying a text on
         clicking we will open a login page-->

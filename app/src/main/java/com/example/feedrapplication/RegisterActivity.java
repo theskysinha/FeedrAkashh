@@ -23,7 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // creating variables for edit text and textview,
     // firebase auth, button and progress bar.
-    private TextInputEditText userNameEdt, passwordEdt, type;
+    private TextInputEditText userNameEdt, passwordEdt, type, location, name;
     private TextView loginTV;
     private Button registerBtn;
     private FirebaseAuth mAuth;
@@ -36,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         // initializing all our variables.
         userNameEdt = findViewById(R.id.idEdtUserName);
+        location = findViewById(R.id.location);
+        name = findViewById(R.id.idEdtName);
         passwordEdt = findViewById(R.id.idEdtPassword);
         loadingPB = findViewById(R.id.idPBLoading);
         type = findViewById(R.id.type);
@@ -64,8 +66,10 @@ public class RegisterActivity extends AppCompatActivity {
                 String userName = userNameEdt.getText().toString();
                 String pwd = passwordEdt.getText().toString();
                 String Type = type.getText().toString();
+                String Location = location.getText().toString();
+                String Name = name.getText().toString();
 
-                if (TextUtils.isEmpty(userName) && TextUtils.isEmpty(pwd) && TextUtils.isEmpty(Type)) {
+                if (TextUtils.isEmpty(userName) && TextUtils.isEmpty(pwd) && TextUtils.isEmpty(Type) && TextUtils.isEmpty(Location) && TextUtils.isEmpty(Name)) {
 
                     // checking if the text fields are empty or not.
                     Toast.makeText(RegisterActivity.this, "Please enter your credentials..", Toast.LENGTH_SHORT).show();
@@ -81,7 +85,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 // in on success method we are hiding our progress bar and opening a login activity.
                                 loadingPB.setVisibility(View.GONE);
                                 Toast.makeText(RegisterActivity.this, "User Registered..", Toast.LENGTH_SHORT).show();
-                                User user = new User(userName, Type);
+                                User user = new User(userName, Name, Type, Location);
 
                                 FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
 
