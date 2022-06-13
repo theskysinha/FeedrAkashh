@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFFFF"
+    tools:context=".DonatorActivity">
+
+    <EditText
+        android:id="@+id/food"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:minHeight="48dp"
+        tools:text="Food" />
+
+    <EditText
+        android:id="@+id/amount"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/food"
+        android:layout_marginLeft="97dp"
+        android:minHeight="48dp"
+        tools:text="Amount" />
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Is your food fresh?"
+        android:layout_below="@id/amount"
+        android:layout_marginTop="75dp"
+        android:layout_margin="100dp"
+        />
+
+    <Button
+        android:id="@+id/yesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-90dp"
+        android:text="Yes" />
+    <Button
+        android:id="@+id/noBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:layout_below="@+id/yesBtn"
+        android:layout_marginLeft="100dp"
+        />
+
+</RelativeLayout>

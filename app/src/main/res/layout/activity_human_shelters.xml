@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="3dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade_1"
+        android:padding="4dp">
+
+        <!--text view for displaying course name-->
+        <TextView
+            android:id="@+id/shelterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:text="Food Shelter 1"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--image view for displaying course image-->
+        <ImageView
+            android:id="@+id/shelterPic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/shelterName"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_launcher_background" />
+
+        <!--text view for displaying course description-->
+        <TextView
+            android:id="@+id/shelterLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shelterName"
+            android:layout_margin="4dp"
+            android:layout_toEndOf="@id/shelterPic"
+            android:layout_toRightOf="@id/shelterPic"
+            android:padding="3dp"
+            android:text="Location"
+            android:textColor="@color/white" />
+
+        <!--text view for displaying course best suited for-->
+        <TextView
+            android:id="@+id/peepsFed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shelterLocation"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@id/shelterPic"
+            android:padding="3dp"
+            android:text="People being fed: "
+            android:textColor="@color/white" />
+
+        <!--text view for displaying course price-->
+        <TextView
+            android:id="@+id/contactPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/peepsFed"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@id/shelterPic"
+            android:padding="3dp"
+            android:text="contactPerson"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contactPerson"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!--button for editing course-->
+            <Button
+                android:id="@+id/callShelter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:text="Call Shelter"
+                android:textAllCaps="false" />
+
+            <!--button for viewing course details-->
+            <Button
+                android:id="@+id/viewDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:text="View Details"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -19,6 +19,14 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.net.HttpCookie;
+import java.util.Locale;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -75,9 +83,38 @@ public class LoginActivity extends AppCompatActivity {
                             loadingPB.setVisibility(View.GONE);
                             Toast.makeText(LoginActivity.this, "Login Successful..", Toast.LENGTH_SHORT).show();
                             // on below line we are opening our mainactivity.
-                            Intent i = new Intent(LoginActivity.this, Profile.class);
-                            startActivity(i);
-                            finish();
+                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+                            reference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    User userProfile = snapshot.getValue(User.class);
+
+                                    if (userProfile != null)
+                                    {
+                                        String type = userProfile.type;
+                                        if (type.toLowerCase().equals("donator")){
+                                            Intent i = new Intent(LoginActivity.this, DonatorActivity.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                        else if (type.toLowerCase().equals("Human Shelter")){
+                                            Intent i = new Intent(LoginActivity.this, Profile.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                        else{
+                                            Intent i = new Intent(LoginActivity.this, Profile.class);
+                                            startActivity(i);
+                                            finish();
+                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
                         } else {
                             // hiding our progress bar and displaying a toast message.
                             loadingPB.setVisibility(View.GONE);
