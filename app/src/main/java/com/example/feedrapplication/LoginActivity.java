@@ -98,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                                             finish();
                                         }
                                         else if (type.toLowerCase().equals("Human Shelter")){
+                                            Shelters s = new Shelters();
                                             Intent i = new Intent(LoginActivity.this, Profile.class);
                                             startActivity(i);
                                             finish();

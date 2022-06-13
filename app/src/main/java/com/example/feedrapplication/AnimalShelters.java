@@ -20,10 +20,7 @@ public class AnimalShelters extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_shelters);
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
-        String userID = user.getUid();
-        UserRecord userRec = FirebaseAuth.getInstance().getUserId
+
 
         final TextView shelternameview = (TextView) findViewById(R.id.shelternameshow);
         final TextView locationview = (TextView) findViewById(R.id.Locationshow);
