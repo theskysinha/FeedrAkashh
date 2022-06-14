@@ -19,6 +19,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -92,13 +93,15 @@ public class LoginActivity extends AppCompatActivity {
                                     if (userProfile != null)
                                     {
                                         String type = userProfile.type;
+                                        String name = userProfile.name;
+                                        String location = userProfile.location;
                                         if (type.toLowerCase().equals("donator")){
-                                            Intent i = new Intent(LoginActivity.this, DonatorActivity.class);
+                                            Intent i = new Intent(LoginActivity.this, Donator_2.class);
                                             startActivity(i);
                                             finish();
                                         }
-                                        else if (type.toLowerCase().equals("Human Shelter")){
-                                            Shelters s = new Shelters();
+                                        else if (type.toLowerCase().equals("human food shelter")){
+                                            Shelters s = new Shelters(name, location, type);
                                             Intent i = new Intent(LoginActivity.this, Profile.class);
                                             startActivity(i);
                                             finish();

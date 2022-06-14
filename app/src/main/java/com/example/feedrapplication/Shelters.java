@@ -3,13 +3,15 @@ package com.example.feedrapplication;
 import java.util.ArrayList;
 
 public class Shelters {
-    ArrayList<String> stringArray = new ArrayList<String>();
-
+    public static ArrayList<String> names = new ArrayList<String>();
+    public static ArrayList<String> locations = new ArrayList<String>();
+    public static ArrayList<String> types = new ArrayList<String>();
     public Shelters() {
     }
 
-    public Shelters(String email, String name, String type, String location) {
-        this.name = name;
-        this.location = location;
+    public Shelters(String name, String loc, String type) {
+        names.add(name);
+        locations.add(loc);
+        types.add(type);
     }
 }

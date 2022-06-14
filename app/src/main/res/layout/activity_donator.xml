@@ -4,20 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#FFFFFFFF"
+    android:background="@color/madang"
     tools:context=".DonatorActivity">
 
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/food" />
+
     <EditText
+
         android:id="@+id/food"
         style="@style/LoginTextInputLayoutStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="100dp"
+        android:fontFamily="More Fonts..."
         android:minHeight="48dp"
-        tools:text="Food" />
+        android:text="Food"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:id="@+id/details"
+        android:text="Food Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="10dp"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/lovelo_black"
+        android:textColor="@color/black"/>
+
 
     <EditText
         android:id="@+id/amount"
@@ -26,16 +50,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/food"
         android:layout_marginLeft="97dp"
+        android:layout_marginTop="-60dp"
+        android:fontFamily="@font/poppins_semibold"
         android:minHeight="48dp"
-        tools:text="Amount" />
+        android:text="Amount"
+        android:textColor="@color/grey"
+        />
+
     <TextView
         android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Is your food fresh?"
         android:layout_below="@id/amount"
-        android:layout_marginTop="75dp"
-        android:layout_margin="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:text="Is the food half-eaten?"
         />
 
     <Button
@@ -46,13 +80,12 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="-90dp"
         android:text="Yes" />
+
     <Button
         android:id="@+id/noBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No"
         android:layout_below="@+id/yesBtn"
         android:layout_marginLeft="100dp"
-        />
-
+        android:text="No" />
 </RelativeLayout>

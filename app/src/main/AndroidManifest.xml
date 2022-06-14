@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Feedrapplication"
         tools:targetApi="31">
         <activity
+            android:name=".ThankYou"
+            android:exported="false" />
+        <activity
+            android:name=".Donator_2"
+            android:exported="false" />
+        <activity
             android:name=".AnimalShelters"
             android:exported="false" />
         <activity
@@ -46,6 +52,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

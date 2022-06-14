@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#60E3BA67"
+    android:background="@color/madang"
     tools:context=".RegisterActivity">
 
 
@@ -14,24 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:fontFamily="monospace"
-        android:text="FEEDR"
+        android:fontFamily="@font/lovelo_black"
+        android:text="Create New Account"
         android:textAlignment="center"
-        android:textColor="#F80303"
-        android:textSize="60sp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/bannerDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Extra Food? Share it."
-        android:textAlignment="center"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/banner"
-        />
 
     <!--edit text for user name-->
     <com.google.android.material.textfield.TextInputLayout
@@ -44,9 +32,9 @@
         android:layout_marginEnd="20dp"
         android:hint="Enter User Name"
         android:padding="5dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/grey"
         app:hintTextColor="@color/black"
-        android:layout_below="@id/bannerDescription">
+        android:layout_below="@id/banner">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/idEdtUserName"
@@ -55,7 +43,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:textColor="@color/black"
+            android:textColor="@color/grey"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -71,7 +59,7 @@
         android:layout_marginEnd="20dp"
         android:hint="Name of Organisation"
         android:padding="5dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/grey"
         app:hintTextColor="@color/black"
         android:layout_below="@id/idTILUserName">
 
@@ -82,7 +70,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:textColor="@color/black"
+            android:textColor="@color/grey"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -99,7 +87,7 @@
         android:layout_marginEnd="20dp"
         android:hint="Enter Your Password"
         android:padding="5dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/grey"
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -109,7 +97,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColor="@color/grey"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -125,7 +113,7 @@
         android:layout_marginEnd="20dp"
         android:hint="Type of Organization"
         android:padding="5dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/grey"
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -135,7 +123,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:textColor="@color/black"
+            android:textColor="@color/grey"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -152,7 +140,7 @@
         android:layout_marginEnd="20dp"
         android:hint="Location"
         android:padding="5dp"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/grey"
         app:hintTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -177,6 +165,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/button_back"
+
         android:text="Register" />
 
     <!--text view for displaying a text on

@@ -1,59 +1,347 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
-    android:background="#F7FFEBEB">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shelter Name"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:id="@+id/shelterTitle"
-        android:textColor="@color/black"
-        />
+        android:layout_margin="5dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/madang"
+        app:cardElevation="3dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_below="@+id/shelterTitle"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:id="@+id/shelternameshow"
-        />
+        <RelativeLayout
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_shade_3"
+            android:padding="4dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Location"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:id="@+id/TypeTitle"
-        android:layout_below="@id/shelternameshow"
-        android:textColor="@color/black"
-        />
+            <TextView
+                android:id="@+id/shelterName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:textSize="40dp"
-        android:id="@+id/Locationshow"
-        android:layout_below="@id/TypeTitle"
-        />
+            <TextView
+                android:id="@+id/shelter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelterName1"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Food Shelter A"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelter1"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Location: Pritampura"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/AnidonateA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:text="Donate Food"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_marginTop="210dp"
+            android:layout_below = "@id/card3"
+            android:background="@color/black_shade_3"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/shelterName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shelter2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelterName2"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Food Shelter B"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelter2"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Location: Akshardham"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location2"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/AnidonateB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:text="Donate Food"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_marginTop="410dp"
+            android:layout_below = "@id/card2"
+            android:background="@color/black_shade_3"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/shelterName3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shelter3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelterName3"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Food Shelter C"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelter3"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Location: Hauz Khas"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location3"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/AnidonateC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:text="Donate Food"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card5"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_marginTop="810dp"
+            android:layout_below="@id/card4"
+            android:background="@color/black_shade_3"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/shelterName5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shelter5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelterName5"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Food Shelter E"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelter5"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Location: Mayur Vihar"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location5"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/donateE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:text="Donate Food"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card4"
+            android:layout_width="match_parent"
+            android:layout_height="198dp"
+            android:layout_marginTop="610dp"
+            android:layout_below="@id/card3"
+            android:background="@color/black_shade_3"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/shelterName4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:padding="4dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shelter4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelterName4"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Food Shelter D"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shelter4"
+                android:layout_margin="4dp"
+                android:padding="3dp"
+                android:text="Location: Rohini"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location4"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/donateD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:layout_weight="1"
+                    android:text="Donate Food"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
